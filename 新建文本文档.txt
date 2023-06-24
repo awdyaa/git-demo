@@ -1,0 +1,65 @@
+export ARCH=arm
+export CROSS_COMPILE=arm-buildroot-linux-gnueabihf-
+export PATH=$PATH:/home/book/100ask_stm32mp157_pro-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin
+
+
+
+编译内核模块：
+make ARCH=arm CROSS_COMPILE=arm-buildroot-linux-gnueabihf- modules -j8
+
+内核模块安装到nfs目录：
+make ARCH=arm INSTALL_MOD_PATH=/home/book/nfs_rootfs INSTALL_MOD_STRIP=1 modules_install
+
+
+0.1171800
+
+设置用户签名：
+	git config --global user.name 用户名
+	git config --global user.email 邮箱
+	
+初始化本地库：
+	git init
+查看：
+	git status
+添加暂存区：
+	git add 文件名
+提交本地库：
+	git commit -m  "提交备注"  文件名
+查看历史版本：
+	git reflog
+版本穿梭：
+	git reset --hard 版本号
+查看分支：
+	git branch -v
+创建分支：
+	git branch 分支名
+切换分支：
+	git checkout 分支名
+合并分支：
+	git merge 另一个分支名
+
+
+ git pull --rebase git-demo master
+
+
+头文件目录：
+	/home/book/100ask_stm32mp157_pro-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/include
+
+库目录:
+	/home/book/100ask_stm32mp157_pro-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+
+开关开发板GUI：
+	systemctl stop myir
+	systemctl start myir
+
+
+编译转换格式：
+	gcc -finput-charset=GB2312 -fexec-charset=UTF-8 -o test_charset_ansi
+		要被转的		转成
+
+
+
+
+
+
+
